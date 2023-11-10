@@ -9,10 +9,6 @@ function Cards({ setCart, addCart }) {
   const [data, setdata] = useState([]);
   useEffect(() => {
     axios.get("https://hotel-data-a8k9.onrender.com/foodItems").then((res) => {
-      console.log("*******************************");
-      console.log(res);
-      console.log("*******************************");
-
       setdata(res.data);
     });
   }, []);
